@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { ClipLoader } from 'react-spinners';
+import Head from 'next/head';
 
 import Header from '@/components/Header';
 import useUser from '@/hooks/useUser';
@@ -30,6 +31,15 @@ const UserView = () => {
 
   return (
     <>
+      <Head>
+        <title>
+          {fetchedUser?.name} (@{fetchedUser?.username}) / Twtr Clone
+        </title>
+        <meta
+          name="description"
+          content="Twtr Clone Web App (for personal project purpose)"
+        />
+      </Head>
       <Header showBackArrow label={fetchedUser?.name} />
       <UserHero userId={userId as string} />
       <UserBio userId={userId as string} />

@@ -1,5 +1,6 @@
 import { NextPageContext } from 'next';
 import { getSession } from 'next-auth/react';
+import Head from 'next/head';
 
 import Header from '@/components/Header';
 import NotificationsFeed from '@/components/NotificationsFeed';
@@ -26,6 +27,13 @@ export async function getServerSideProps(context: NextPageContext) {
 const Notifications = () => {
   return (
     <>
+      <Head>
+        <title>Notifications / Twtr Clone</title>
+        <meta
+          name="description"
+          content="Twtr Clone Web App (for personal project purpose)"
+        />
+      </Head>
       <Header label="Notifications" showBackArrow />
       <NotificationsFeed />
     </>
