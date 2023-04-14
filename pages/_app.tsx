@@ -7,6 +7,7 @@ import Layout from '@/components/Layout';
 import RegisterModal from '@/components/modals/RegisterModal';
 import LoginModal from '@/components/modals/LoginModal';
 import EditModal from '@/components/modals/EditModal';
+import TweetModal from '@/components/modals/TweetModal';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <EditModal />
       <RegisterModal />
       <LoginModal />
+      <TweetModal />
       <Layout>
         <Component {...pageProps} />
       </Layout>
