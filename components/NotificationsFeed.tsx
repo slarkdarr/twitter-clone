@@ -27,8 +27,6 @@ const NotificationsFeed = () => {
     );
   }
 
-  console.log(fetchedNotifications);
-
   return (
     <div className="flex flex-col">
       {fetchedNotifications.map((notification: Record<string, any>) => (
