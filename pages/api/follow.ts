@@ -38,7 +38,7 @@ export default async function handler(
       try {
         await prisma.notification.create({
           data: {
-            body: `${user.name} (@${user.username}) followed you!`,
+            body: `${currentUser.name} (@${currentUser.username}) followed you!`,
             userId,
           },
         });
