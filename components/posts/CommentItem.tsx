@@ -66,6 +66,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
             >
               @{data.user.username}
             </span>
+            <span className="text-neutral-500 text-sm">·</span>
             <span className="text-neutral-500 text-sm">{createdAt}</span>
           </div>
           <div className="text-white mt-1">{data.body}</div>
