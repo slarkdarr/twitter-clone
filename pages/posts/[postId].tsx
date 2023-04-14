@@ -14,7 +14,7 @@ const PostView = () => {
   const { postId } = router.query;
 
   const { data: fetchedPost, isLoading } = usePost(postId as string);
-  const { data: fetchedUser } = useUser(fetchedPost.userId as string);
+  const { data: fetchedUser } = useUser(fetchedPost?.userId);
 
   if (isLoading || !fetchedPost) {
     return (
@@ -28,7 +28,7 @@ const PostView = () => {
     <>
       <Head>
         <title>
-          {fetchedUser?.name} on Twtr: &quot;{fetchedPost.body}&quot; / Twtr
+          {fetchedUser?.name} on Twtr: &quot;{fetchedPost?.body}&quot; / Twtr
           Clone
         </title>
         <meta
