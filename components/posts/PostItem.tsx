@@ -71,7 +71,7 @@ const PostItem: React.FC<PostItemProps> = ({ data, userId }) => {
       "
       onClick={goToPost}
     >
-      <div className="flex flex-row items-star gap-3">
+      <div className="flex flex-row items-start gap-3">
         <Avatar userId={data.user.id} />
         <div>
           <div className="flex flex-row items-center gap-2">
