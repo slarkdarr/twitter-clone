@@ -56,7 +56,9 @@ const FollowBar = () => {
   }
 
   const filteredUsers = users.filter(
-    (filteredUser: Record<string, any>) => filteredUser.id !== currentUser.id
+    (filteredUser: Record<string, any>) =>
+      filteredUser.id !== currentUser.id &&
+      !currentUser.followingIds.includes(filteredUser.id)
   );
 
   return (
